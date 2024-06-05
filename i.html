@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bird Fly Animation</title>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background-color: skyblue;
+    }
+    
+    .bird {
+        width: 50px;
+        height: 50px;
+        background-image: url('https://cdn.iconscout.com/icon/free/png-256/bird-2691357-2248357.png');
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        left: -50px;
+        animation: fly 5s linear infinite;
+    }
+
+    @keyframes fly {
+        0% {
+            transform: translateX(0) translateY(-50%);
+        }
+        100% {
+            transform: translateX(calc(100vw + 50px)) translateY(-50%);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="bird"></div>
+</body>
+</html>
